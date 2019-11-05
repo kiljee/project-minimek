@@ -15,12 +15,12 @@ const buttonWidth = 140;
 
 const actions = {addNewPilot};
 
-const PilotCommands = (props) => (
+const PilotCommands = ({ isEditingPilot, addNewPilot }) => (
     <Button
         primary
-        disabled={props.isEditingPilot}
+        disabled={isEditingPilot}
         type="button"
-        onClick={props.addNewPilot}
+        onClick={addNewPilot}
         style={{width : buttonWidth, marginRight : 10}}
     >
         Add New Pilot

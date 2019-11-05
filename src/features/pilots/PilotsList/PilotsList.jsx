@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import {connect} from "react-redux";
 import {Table} from "semantic-ui-react";
 
@@ -46,9 +46,7 @@ const actions = {
 };
 
 
-export class PilotsList extends Component {
-    render() {
-        const {pilots = [], selectPilot, currentPilot} = this.props;
+export const PilotsList = ({pilots = [], selectPilot, currentPilot}) => {
 
         const pilotRows = pilots.map(pilotID => (
             <PilotsListRow
@@ -68,6 +66,5 @@ export class PilotsList extends Component {
             </Table>
         )
     }
-}
 
 export default connect(mapState, actions)(PilotsList);

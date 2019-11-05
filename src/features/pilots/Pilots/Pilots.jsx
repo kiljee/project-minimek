@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 
 import {
     Grid,
@@ -11,9 +11,7 @@ import PilotDetails from "../PilotDetails";
 import PilotCommands from "../PilotDetails/PilotCommands";
 
 
-export default class Pilots extends Component {
-    render() {
-        return (
+const  Pilots = () => (
             <Segment>
                 <Grid>
                     <Grid.Column width={10}>
@@ -32,5 +30,5 @@ export default class Pilots extends Component {
                 </Grid>
             </Segment>
         );
-    }
-}
+
+export default Pilots;
